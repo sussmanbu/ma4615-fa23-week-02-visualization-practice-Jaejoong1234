@@ -1,7 +1,7 @@
 ---
 title: "Week 02: COVID Visualization Activity"
 date: "September, 11 2023"
-author: "**`[[`**Your Name**`]]`**"
+author: "**`[[`**Jaejoong Kim**`]]`**"
 ---
 
 Today, we'll be working with a data set related to COVID.
@@ -35,7 +35,55 @@ covid_data_count |>
   ggplot(aes(x = date, y = Cases, color = race)) + geom_line()
 ```
 
-1. Write code for a plot and describe what you observe?
+1. Write code for a plot and describe what you observe? 
+
+Code:
+```{r}
+ggplot(covid_data_count, aes(x = date, y = Cases)) + geom_point()
+```
+
+
+Description:
+This code generates a scatterplot using the ggplot2 library in R. The x-axis represents the date, and the y-axis represents the number of COVID cases. Each point on the plot represents the number of cases reported on a specific date.
+
+From the plot, we can observe the following:
+
+  1. The x-axis shows a time series from the start date to the end date, indicating the progression of time.
+  2. The y-axis represents the number of COVID cases, which appears to increase over time.
+  3. Each point on the plot represents a data point for a specific date, and the distribution of points provides a visual representation of how the number of cases has changed over time.
+  4. The plot can help us identify trends or patterns in the data, such as spikes or dips in the number of COVID cases, which may indicate significant events or changes in the pandemic's progression.
+
 2. Are there any conclusions you can draw?
+
+From the provided code and description, we can make the following observations and draw some initial conclusions:
+
+  1. Time Series Trend: The scatterplot shows a time series trend of COVID cases over time. It is evident that the number of cases has varied over the course of the pandemic.
+
+  2. Increasing Trend: The general trend appears to be an increase in the number of COVID cases over time. This suggests that the pandemic has been ongoing, with periods of rising cases.
+
+  3. Data Distribution: The distribution of points provides insight into the variations in daily reported cases. Spikes and fluctuations in the number of cases can be seen, which may correspond to surges or declines in the spread of the virus.
+
+However, it's important to note that while these observations can be made from the plot, drawing concrete conclusions about the pandemic's status or the factors driving these trends would require further analysis and consideration of additional variables. This plot serves as a starting point for visualizing the data, and more in-depth analysis would be needed to draw definitive conclusions about the pandemic's progression.
+
 3. What were you not able to do due to not having the R knowledge?
+
+  1. Data Interpretation: Understanding the data thoroughly is essential. Without a clear understanding of the data's structure, variable meanings, and potential data quality issues, it can be challenging to create meaningful visualizations or draw conclusions.
+
+  2. Statistical Analysis: To draw meaningful insights, more advanced statistical analysis techniques might be required. For example, conducting time series analysis, calculating growth rates, or identifying correlations between variables would go beyond basic plotting.
+
+  3. Data Cleaning and Preprocessing: The quality of visualizations depends on the quality of the underlying data. Cleaning and preprocessing data, handling missing values, and dealing with outliers are crucial but often complex tasks.
+
 4. What other data would be useful to better understand this data?
+
+To better understand the COVID data presented in the visualization and conduct a more comprehensive analysis, several additional types of data would be useful:
+
+  1. Demographic Data: Incorporating demographic information such as age, gender, and socioeconomic status can help identify which population groups are most affected by COVID-19. This can lead to more targeted interventions and policies.
+
+  2. Geographic Data: Geospatial data, including information about regions, cities, and rural areas, can help analyze the spatial distribution of COVID-19 cases. Maps and spatial analysis can reveal hotspots and areas with higher transmission rates.
+
+  3. Vaccination Data: Data on COVID-19 vaccination rates, including the number of individuals vaccinated, the type of vaccine administered, and vaccination coverage by demographic groups, can provide insights into the impact of vaccination campaigns.
+
+  4. Healthcare Infrastructure: Information about healthcare infrastructure, including the availability of hospital beds, ICU capacity, and ventilator usage, is critical for understanding the healthcare system's capacity to handle COVID-19 cases.
+
+
+
